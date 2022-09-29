@@ -1,0 +1,29 @@
+.Day {
+  border: 3px solid grey;
+  text-align: center;
+  border-radius: 40px;
+  width: 120px;
+  height: 140px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+  transition: 1s;
+}
+.Day:hover {
+  transform: scale(1.1);
+}
+.weather-forecast-day {
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.weather-forecast-temperature-min {
+  padding-left: 10px;
+  opacity: 0.5;
+}

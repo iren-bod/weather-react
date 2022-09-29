@@ -1,0 +1,9 @@
+.ProjectLink {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.ProjectLink a {
+  text-decoration: none;
+  margin-right: 5px;
+}
