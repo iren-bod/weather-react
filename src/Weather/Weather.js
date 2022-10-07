@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import FormattedDate from "../FormattedDate/FormattedDate";
+import WeatherTemperature from "../WeatherTemperature/WeatherTemperature";
 
-export default function Weather() {
+export default function Weather(props) {
   const [city, setCity] = useState("");
   const [text, setText] = useState("");
   const [loaded, setLoaded] = useState(false);
@@ -62,10 +63,7 @@ export default function Weather() {
           <div className="WeatherIndicators">
             <ul>
               <li>
-                <strong>Temperature: </strong>
-                <span id="temperature">
-                  {Math.round(weather.temperature)}°C
-                </span>
+                <WeatherTemperature celsius={weather.temperature} />
               </li>
               <li>
                 <strong>Humidity: </strong>
