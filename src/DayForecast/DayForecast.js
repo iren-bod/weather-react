@@ -17,16 +17,16 @@ export default function DayForecast(props) {
 
   function day() {
     let date = new Date(props.data.dt * 1000);
-    let day = date.getDay() + 1;
+    let day = date.getDay();
 
     let days = [
-      "Sunday",
       "Monday",
       "Tuesday",
       "Wednesday",
       "Thursday",
       "Friday",
       "Saturday",
+      "Sunday",
     ];
 
     return days[day];
