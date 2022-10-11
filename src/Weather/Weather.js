@@ -3,6 +3,7 @@ import axios from "axios";
 
 import FormattedDate from "../FormattedDate/FormattedDate";
 import WeatherTemperature from "../WeatherTemperature/WeatherTemperature";
+import WeatherForecast from "../WeatherForecast/WeatherForecast";
 
 export default function Weather(props) {
   const [city, setCity] = useState("");
@@ -14,6 +15,7 @@ export default function Weather(props) {
     setLoaded(true);
     setWeather({
       temperature: response.data.main.temp,
+      coordinates: response.data.coord,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -77,6 +79,9 @@ export default function Weather(props) {
           </div>
         </ul>
         <p className="WeatherDescription">{weather.description}</p>
+        <hr />
+        <h2>Forecast for the next 5 days</h2>
+        <WeatherForecast coordinates={weather.coordinates} />
       </div>
     );
   } else {
